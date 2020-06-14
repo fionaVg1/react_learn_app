@@ -1,7 +1,10 @@
 import React,{PureComponent} from 'react';
 import Navbar from './components/navbar'
 import ListPage from './components/listPage'
+import ItemA from './components/hoc/itemA'
+import ItemB from './components/rp/itemB'
 import './App.css';
+import {Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css'
 import { throwStatement } from '@babel/types';
 class App extends PureComponent {
@@ -101,6 +104,14 @@ class App extends PureComponent {
       handleDelete ={this.handleDelete} 
       handleIncrease ={this.handleIncrease}
       handleDecrease ={this.handleDecrease}/>
+      <ItemA/>
+      <ItemB/>
+      <div className="container">
+        <Route path="/products" component={Products}/>
+        <Route path="/posts" component={Posts}/>
+        <Route path="/admin" component={Dashboard}/>
+        <Route path="/" component={Home}/>
+      </div>
       </>
      );
   }
