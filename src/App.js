@@ -3,8 +3,18 @@ import Navbar from './components/navbar'
 import ListPage from './components/listPage'
 import ItemA from './components/hoc/itemA'
 import ItemB from './components/rp/itemB'
+import Products from './components/products'
+import ProductDetails from './components/productDetails'
+import Posts from './components/posts'
+import Dashboard from './components/dashboard'
+import NotFound from './components/notFound'
+import Home from './components/home'
 import './App.css';
+import 'antd/dist/antd.css';
+import MyLayout from './layout/index'
+import {Button} from 'antd'
 import {Route} from 'react-router-dom'
+import {Switch,Link,Redirect} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css'
 import { throwStatement } from '@babel/types';
 class App extends PureComponent {
@@ -107,10 +117,28 @@ class App extends PureComponent {
       <ItemA/>
       <ItemB/>
       <div className="container">
-        <Route path="/products" component={Products}/>
-        <Route path="/posts" component={Posts}/>
-        <Route path="/admin" component={Dashboard}/>
-        <Route path="/" component={Home}/>
+        <ul role="nav">
+          <li><Link to="/products">products</Link></li>       
+          <li><Link to="/posts">posts</Link></li>       
+          <li><Link to="/admin">admin</Link></li>      
+          <li><Link to="/">home</Link></li>      
+        </ul>
+        <Switch>
+          <Route path="/products/:id" component={ProductDetails}/>
+          <Redirect from="/mall" to="products"/>
+          <Route path="/products" render={(props)=><Products groupId="products" {...props}/>}/>
+          <Route path="/posts/:year?/:month?" component={Posts}/>
+          <Route path="/admin" component={Dashboard}/>
+          <Route path="/not-found" component={NotFound}/>
+          <Route path="/" exact component={Home}/>
+          <Redirect to="/not-found"/>
+        </Switch>
+        <div className="container">
+          <Button type="primary">OK</Button>
+        </div>
+        <div className="container">
+          <MyLayout></MyLayout>
+        </div>
       </div>
       </>
      );

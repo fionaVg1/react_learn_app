@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main { display: flex; }
+        #main > article { flex:1;         order: 2; }
+        #main > nav     { width: 200px;   order: 1; }
+        #main > aside   { width: 200px;   order: 3; }
+    </style>
+</head>
+<body>
+    <header>…</header>
+    <div id='main'>
+        <article>article 2</article>
+        <nav>nav 1</nav>
+        <aside>aside 3</aside>
+    </div>
+    <footer>…</footer>
+    <script src="test.js"></script>
+</body>
+</html>
