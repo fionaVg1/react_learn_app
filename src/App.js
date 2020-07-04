@@ -9,6 +9,7 @@ import Posts from './components/posts'
 import Dashboard from './components/dashboard'
 import NotFound from './components/notFound'
 import Home from './components/home'
+import ReduxHome from './redux/containers/home'
 import './App.css';
 import 'antd/dist/antd.css';
 import MyLayout from './layout/index'
@@ -139,6 +140,9 @@ class App extends PureComponent {
         <div className="container">
           <MyLayout></MyLayout>
         </div>
+        <div className="container">
+          <ReduxHome></ReduxHome>
+        </div>        
       </div>
       </>
      );
