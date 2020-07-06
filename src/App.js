@@ -12,6 +12,7 @@ import Home from './components/home'
 import './App.css';
 import 'antd/dist/antd.css';
 import MyLayout from './layout/index'
+import MyHooks from './hooks/index'
 import {Button} from 'antd'
 import {Route} from 'react-router-dom'
 import {Switch,Link,Redirect} from 'react-router-dom'
@@ -138,6 +139,9 @@ class App extends PureComponent {
         </div>
         <div className="container">
           <MyLayout></MyLayout>
+        </div>
+        <div className="container">
+          <MyHooks></MyHooks>
         </div>
       </div>
       </>
