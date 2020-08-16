@@ -9,18 +9,12 @@
     "antd": "^4.3.4",
     "bootstrap": "^4.5.0",
     "classnames": "^2.2.6",
-    "prop-types": "^15.7.2",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
-    "regenerator-runtime": "^0.13.5",
-    "reselect": "^4.0.0"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +37,11 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.5",
+    "reselect": "^4.0.0"
+  }
 }

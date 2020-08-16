@@ -9,10 +9,10 @@ import Posts from './components/posts'
 import Dashboard from './components/dashboard'
 import NotFound from './components/notFound'
 import Home from './components/home'
-import ReduxHome from './redux/containers/home'
 import './App.css';
 import 'antd/dist/antd.css';
 import MyLayout from './layout/index'
+import MyHooks from './hooks/index'
 import {Button} from 'antd'
 import {Route} from 'react-router-dom'
 import {Switch,Link,Redirect} from 'react-router-dom'
@@ -141,8 +141,8 @@ class App extends PureComponent {
           <MyLayout></MyLayout>
         </div>
         <div className="container">
-          <ReduxHome></ReduxHome>
-        </div>        
+          <MyHooks></MyHooks>
+        </div>
       </div>
       </>
      );
